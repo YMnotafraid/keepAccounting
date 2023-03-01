@@ -1,6 +1,6 @@
 # Node+React实现个人记账webApp
 ## 项目技术选型：
-后端选择的是Node.js上层架构Egg.js，因为Egg提供了一个强大的插件机制，让独立的模块编写起来更方便，本项目中引入了现成的egg-mysql，egg-jwt等插件。大大的降低了开发成本，用过都说好~   
+后端选择的是Node.js上层架构Egg.js，因为Egg提供了一个强大的插件机制，让独立的模块编写起来更方便，本项目中引入了现成的egg-mysql，egg-jwt等插件。大大的降低了开发成本，用过都说好~   [后端传送门](https://github.com/YMnotafraid/acount-server)
 
 前端选择的是React技术栈，全程用hooks编写。脚手架选择的是Vite
 ## 项目介绍
