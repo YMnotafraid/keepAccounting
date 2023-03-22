@@ -20,7 +20,7 @@
 ### 编写登录验证中间件，解决了两个痛点：
 1、每次编写新的接口，都需要在方法内部做判断，出现重复代码   
 2、一旦鉴权有所调整，牵一发动全身，需要修改所有用到鉴权的代码
-```
+```javascript
 module.exports = (secret) => {
   return async function jwtErr(ctx, next) {
     const token = ctx.request.header.authorization; // 若是没有 token，返回的是 null 字符串
@@ -52,7 +52,7 @@ module.exports = (secret) => {
 ```
 ### 二次封装axios
 设置请求头携带token用于鉴权，格式化post请求体，设置拦截器配合组件库弹窗反馈请求状态提高用户体验
-```
+```javascript
 import axios from "axios";
 import { Toast } from "zarm";
 
@@ -88,7 +88,7 @@ export default axios;
 ```
 ### 封装公共组件：时间筛选弹窗
 在账单详情页面和统计收支页面使用当前组件时间精确到月，在新增账单页面时间精确到日，通过mode参数可实现不同时间精度的筛选
-```
+```javascript
 import React, { forwardRef, useState } from "react";
 import PropTypes from "prop-types";
 import { Popup, DatePicker } from "antd-mobile";
